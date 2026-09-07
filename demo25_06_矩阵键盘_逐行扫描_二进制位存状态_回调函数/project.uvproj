@@ -387,29 +387,9 @@
           <GroupName>Lib</GroupName>
           <Files>
             <File>
-              <FileName>ADC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\ADC.c</FilePath>
-            </File>
-            <File>
-              <FileName>ADC_Isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\ADC_Isr.c</FilePath>
-            </File>
-            <File>
               <FileName>Delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\Delay.c</FilePath>
-            </File>
-            <File>
-              <FileName>Exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\Exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>Exti_Isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\Exti_Isr.c</FilePath>
             </File>
             <File>
               <FileName>GPIO.c</FileName>
@@ -417,39 +397,9 @@
               <FilePath>.\Lib\GPIO.c</FilePath>
             </File>
             <File>
-              <FileName>I2C.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\I2C.c</FilePath>
-            </File>
-            <File>
-              <FileName>I2C_Isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\I2C_Isr.c</FilePath>
-            </File>
-            <File>
               <FileName>NVIC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\NVIC.c</FilePath>
-            </File>
-            <File>
-              <FileName>STC8H_PWM.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\STC8H_PWM.c</FilePath>
-            </File>
-            <File>
-              <FileName>STC8H_PWM_Isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\STC8H_PWM_Isr.c</FilePath>
-            </File>
-            <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\Timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>Timer_Isr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Lib\Timer_Isr.c</FilePath>
             </File>
             <File>
               <FileName>UART.c</FileName>
@@ -466,11 +416,6 @@
         <Group>
           <GroupName>Driver</GroupName>
           <Files>
-            <File>
-              <FileName>DHT11.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Driver\DHT11.c</FilePath>
-            </File>
             <File>
               <FileName>oled.c</FileName>
               <FileType>1</FileType>
