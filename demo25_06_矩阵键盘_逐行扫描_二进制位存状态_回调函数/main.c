@@ -32,9 +32,9 @@ void KEY_scan(u8 row, u8 col, u8 state) {
     static u8 position;
     position = row * COL_NUM + col + 1;
     if(state) {
-        printf("key%d %d行%d列 抬起\n",(int)(row * COL_NUM + col + 1), (int)(row + 1), (int)(col + 1));
+        printf("key%d %d行%d列 抬起\n",(int)(position), (int)(row + 1), (int)(col + 1));
     } else {
-        printf("key%d %d行%d列 按下\n",(int)(row * COL_NUM + col + 1), (int)(row + 1), (int)(col + 1));
+        printf("key%d %d行%d列 按下\n",(int)(position), (int)(row + 1), (int)(col + 1));
     }
 }
 

@@ -14,7 +14,7 @@ void Keys_init(void);
 
 void Keys_scan(void);
 
-typedef void (* Keys_on_state)(u8 key_index)
+typedef void (* Keys_on_state)(u8 key_index);
 
 
 extern void Keys_on_keyup(u8 key_index);

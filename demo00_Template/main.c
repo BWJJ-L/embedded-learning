@@ -3,13 +3,7 @@
 #include "UART.h"
 #include "NVIC.h"
 #include "Switch.h"
-#include "Timer.h"
 #include "Delay.h"
-#include "ADC.h"
-#include "STC8H_PWM.h"
-#include "I2C.h"
-#include "Exti.h"
-
 
 
 void GPIO_config(void) {
