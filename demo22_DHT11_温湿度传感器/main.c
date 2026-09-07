@@ -8,7 +8,6 @@
 #include "ADC.h"
 #include "STC8H_PWM.h"
 #include "I2C.h"
-#include "Exti.h"
 #include "DHT11.h"
 
 void GPIO_config(void) {
