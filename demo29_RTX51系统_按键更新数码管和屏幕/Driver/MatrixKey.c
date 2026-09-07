@@ -48,7 +48,7 @@ void MK_key_state(MK_CallBack callback) {
                     callback(row, col, DOWN);
                 } else {
 //                    printf("Key (%dÐÐ%dÁÐ) Ì§Æð!\n", (int)(row + 1), (int)(col + 1));
-                    callback(row, col, UP);
+//                    callback(row, col, UP);
                 }
             }
             pos++;
