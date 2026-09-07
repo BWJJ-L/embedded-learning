@@ -5,7 +5,6 @@
 #include "Switch.h"
 #include "Timer.h"
 #include "Delay.h"
-#include "ADC.h"
 #include "STC8H_PWM.h"
 #include "I2C.h"
 #include "PCF8563.h"
