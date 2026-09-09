@@ -1,5 +1,6 @@
 # ===== Keil uVision 编译/临时产物 =====
-Objects/
+Objects/*
+!Objects/*.hex
 Listings/
 *.uvguix.*
 *.uvgui.*
@@ -12,6 +13,8 @@ Listings/
 *.m51
 *.build_log.htm
 *.scvd
+project
+*.__i
 
 # ===== 系统文件 =====
 Thumbs.db
