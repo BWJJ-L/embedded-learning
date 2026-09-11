@@ -1,0 +1,27 @@
+# ===== 本离线站的运行时资源全部在 vendor/ 与 js/ 中，以下为开发辅助，不入版本库 =====
+
+# 测试依赖（跑 tests/verify.js 前执行 npm install 即可恢复）
+tests/node_modules/
+
+# Pyodide 发行文件（由 tests/fetch-pyodide.js 下载恢复）
+tests/pyodide-dist/
+
+# 引擎构建的中间产物（由 tests/build-engine.js 自动生成）
+tests/engine-orig/
+tests/engine-src/
+
+# 构建产物（由 tests/build-engine.js 生成）
+vendor/jscpp.es5.min.js
+vendor/pyodide.js
+
+# 测试残留 / 覆盖率产物
+tests/tmp-test/
+.nyc_output/
+coverage/
+
+# ===== 系统与编辑器 =====
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
