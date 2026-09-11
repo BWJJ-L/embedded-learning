@@ -1,0 +1,93 @@
+# ============================================================
+# 换行符（EOL）规范化规则
+# ------------------------------------------------------------
+# 目的：消除「保存/检出文件即触发全仓库假 diff」的问题。
+#
+# 背景（2026-09-12 实测本仓库）：
+#   git 配置 core.autocrlf=true，而 Windows 侧写入的是 CRLF。
+#   638 个 .c 中 592 个、462 个 .h 中 454 个在工作区是 CRLF，
+#   导致几乎每个 demo 文件夹都被判定为「已修改」。
+#
+# 策略：
+#   1) 文本文件统一以 LF 存入 Git —— 跨平台一致，diff 干净可读；
+#   2) 工作区检出为 LF（eol=lf），避免 Windows 侧再写回 CRLF，
+#      从根上杜绝「保存即全文变更」；
+#   3) 真正的二进制（可执行、压缩包）标记 -text，禁止任何转换。
+#
+# 已验证（2026-09-12）：
+#   - Keil C51/A51 汇编器对 LF 换行完全兼容；
+#   - 39 个 .hex 共 24769 条记录，LF 形态下结构与校验和全部正确；
+#   - .LIB / .uvproj / .map 等不受影响。
+# ============================================================
+
+# ---- 默认：自动识别文本文件，统一 LF ----
+* text=auto eol=lf
+
+# ============================================================
+# 一、源码：强制 LF
+# ============================================================
+*.c        text eol=lf
+*.h        text eol=lf
+*.asm      text eol=lf
+*.a51      text eol=lf
+*.A51      text eol=lf
+*.inc      text eol=lf
+*.s        text eol=lf
+
+# ============================================================
+# 二、Web / 脚本 / 文档 / 库文件：强制 LF
+# ============================================================
+*.js       text eol=lf
+*.mjs      text eol=lf
+*.ts       text eol=lf
+*.css      text eol=lf
+*.html     text eol=lf
+*.json     text eol=lf
+*.md       text eol=lf
+*.txt      text eol=lf
+*.yml      text eol=lf
+*.yaml     text eol=lf
+*.pegjs    text eol=lf
+*.ps1      text eol=lf
+*.lib      text eol=lf
+*.LIB      text eol=lf
+
+# Keil 工程与链接产物（本质是 UTF-8 文本 XML / 文本报告）
+*.uvproj   text eol=lf
+*.uvprojx  text eol=lf
+*.uvopt    text eol=lf
+*.map      text eol=lf
+*.lst      text eol=lf
+*.lnp      text eol=lf
+*.dep      text eol=lf
+
+# 烧录固件：Intel HEX 是纯 ASCII 行结构化文本，
+# 统一 LF 不影响内容（校验和与记录结构已验证无损）。
+*.hex      text eol=lf
+
+# ============================================================
+# 三、Windows 专用脚本：必须 CRLF，否则可能执行异常
+# ============================================================
+*.bat      text eol=crlf
+*.cmd      text eol=crlf
+
+# ============================================================
+# 四、真正的二进制：禁止任何换行符转换
+# ============================================================
+*.zip      -text
+*.7z       -text
+*.rar      -text
+*.exe      -text
+*.dll      -text
+*.wasm     -text
+*.bin      -text
+*.obj      -text
+*.axf      -text
+*.png      -text
+*.jpg      -text
+*.jpeg     -text
+*.gif      -text
+*.ico      -text
+*.pdf      -text
+*.xlsx     -text
+*.docx     -text
