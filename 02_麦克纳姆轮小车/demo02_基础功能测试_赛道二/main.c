@@ -11,10 +11,14 @@
 #include "Buzzer.h"
 #include "Ultrasonic.h"
 #include "Motors.h"
+#include "Track.h"
 
 
 #define TASK_LIGHT  1
 #define TASK_KEY    2
+#define TASK_TRACK  3
+#define TASK_UART1  4
+#define TASK_UART2  5
 
 
 void GPIO_config(void) {
@@ -22,11 +26,14 @@ void GPIO_config(void) {
 	GPIO_InitStructure.Pin  = GPIO_Pin_0 | GPIO_Pin_1;		//指定要初始化的IO,
 	GPIO_InitStructure.Mode = GPIO_PullUp;	//指定IO的输入或输出方式,GPIO_PullUp,GPIO_HighZ,GPIO_OUT_OD,GPIO_OUT_PP
 	GPIO_Inilize(GPIO_P3, &GPIO_InitStructure);//初始化
+    
+    P1_MODE_IO_PU(GPIO_Pin_0 | GPIO_Pin_1);
 }
 
 void UART_config(void) {
 	// >>> 记得添加 NVIC.c, UART.c, UART_Isr.c <<<
     COMx_InitDefine		COMx_InitStructure;					//结构定义
+    //================UART 1==========================
     COMx_InitStructure.UART_Mode      = UART_8bit_BRTx; 	//模式, UART_ShiftRight,UART_8bit_BRTx,UART_9bit,UART_9bit_BRTx
     COMx_InitStructure.UART_BRT_Use   = BRT_Timer1;			//选择波特率发生器, BRT_Timer1, BRT_Timer2 (注意: 串口2固定使用BRT_Timer2)
     COMx_InitStructure.UART_BaudRate  = 115200ul;			//波特率, 一般 110 ~ 115200
@@ -36,6 +43,18 @@ void UART_config(void) {
 
   	NVIC_UART1_Init(ENABLE,Priority_1);		//中断使能, ENABLE/DISABLE; 优先级(低到高) Priority_0,Priority_1,Priority_2,Priority_3
     UART1_SW(UART1_SW_P30_P31);		// 引脚选择, UART1_SW_P30_P31,UART1_SW_P36_P37,UART1_SW_P16_P17,UART1_SW_P43_P44
+    
+    
+    //================UART 2==========================
+    COMx_InitStructure.UART_Mode      = UART_8bit_BRTx; 	//模式, UART_ShiftRight,UART_8bit_BRTx,UART_9bit,UART_9bit_BRTx
+    COMx_InitStructure.UART_BRT_Use   = BRT_Timer2;			//选择波特率发生器, BRT_Timer1, BRT_Timer2 (注意: 串口2固定使用BRT_Timer2)
+    COMx_InitStructure.UART_BaudRate  = 115200ul;			//波特率, 一般 110 ~ 115200
+    COMx_InitStructure.UART_RxEnable  = ENABLE;				//接收允许,   ENABLE或DISABLE
+    COMx_InitStructure.BaudRateDouble = DISABLE;			//波特率加倍, ENABLE或DISABLE
+    UART_Configuration(UART2, &COMx_InitStructure);		    //初始化串口1 UART1,UART2,UART3,UART4
+
+  	NVIC_UART2_Init(ENABLE,Priority_1);		//中断使能, ENABLE/DISABLE; 优先级(低到高) Priority_0,Priority_1,Priority_2,Priority_3
+    UART2_SW(UART2_SW_P10_P11);		// 引脚选择, UART1_SW_P30_P31,UART1_SW_P36_P37,UART1_SW_P16_P17,UART1_SW_P43_P44
 }
 
 void sys_init() {
@@ -51,6 +70,7 @@ void sys_init() {
     Buzzer_init();
     Ultrasonic_init();
     Motors_init();
+    Track_init();
     
     EA = 1;
 }
@@ -61,6 +81,9 @@ void main_task() _task_ 0 {
     os_create_task(TASK_LIGHT);
     
     os_create_task(TASK_KEY);
+    
+    os_create_task(TASK_UART1);
+    os_create_task(TASK_UART2);
     
     os_delete_task(0);
 }
@@ -90,9 +113,6 @@ void Key_on_keydown() {
     float vol;
     float distance;
     char ret;
-
-    
-    printf("DOWN\n");
     
     
     //测电压
@@ -116,7 +136,6 @@ void Key_on_keydown() {
     
     
     //DC电机驱动
-        
 //    switch(flag) {                          //左前   直前   右前
 //        case 0:
 //            printf("----方向1\n");
@@ -158,19 +177,19 @@ void Key_on_keydown() {
 //            break;
 //        default: break;
 //    }
-        
-    switch(flag) {                        // 顺时针原地旋转    逆时针原地旋转
-        case 0:
-            printf("----方向1\n");
-            Motors_around(speed, LEFT_M);
-            break;
-        case 1:
-            printf("----方向2\n");
-            Motors_around(speed, RIGHT_M);
-            break;
-        default: break;
-    }
-    
+
+//    switch(flag) {                        // 顺时针原地旋转    逆时针原地旋转
+//        case 0:
+//            printf("----方向1\n");
+//            Motors_around(speed, LEFT_M);
+//            break;
+//        case 1:
+//            printf("----方向2\n");
+//            Motors_around(speed, RIGHT_M);
+//            break;
+//        default: break;
+//    }
+
 //    switch(flag) {                    //  向左转  向右转
 //        case 0:
 //            printf("----方向1\n");
@@ -183,9 +202,21 @@ void Key_on_keydown() {
 //        default: break;
 //    }
     
+    
+    switch(flag){
+        case 0:
+            os_create_task(TASK_TRACK);
+            break;
+        case 1:
+            os_delete_task(TASK_TRACK);
+            Motors_stop();
+            break;
+        default: break;
+    }
+    
     flag++;
     
-    if(flag > 2) flag = 0;
+    if(flag > 1) flag = 0;
 }
 void Key_on_keyup(){
     printf("UP");
@@ -197,3 +228,90 @@ void task_2() _task_ TASK_KEY {
         os_wait2(K_TMO, 2);
     }
 }
+
+void task_3() _task_ TASK_TRACK {
+    char speed = 20;
+    int pos = 0;
+    
+    while(1){
+        pos = Track_get_position();
+        if(pos == -64){
+            Motors_turn(speed+5, LEFT_M);
+        } else if(pos == -48){
+            Motors_turn(speed+10, LEFT_M);
+        } else if(pos == -32){
+            Motors_turn(speed+10, LEFT_M);
+        } else if(pos == -21){
+            Motors_turn(speed+10, LEFT_M);
+        } else if(pos == -16){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == -10){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == -8){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == 0){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == 8){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == 10){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == 16){
+            Motors_forward(speed+30, MID_M);
+        } else if(pos == 21){
+            Motors_turn(speed+10, RIGHT_M);
+        } else if(pos == 32){
+            Motors_turn(speed+10, RIGHT_M);
+        } else if(pos == 48){
+            Motors_turn(speed+10, RIGHT_M);
+        } else if(pos == 64){
+            Motors_turn(speed+5, RIGHT_M);
+        }
+        
+//        os_wait2(K_TMO, 100);
+    }
+}
+
+void task_4() _task_ TASK_UART1 {
+    u8 i;
+    while(1) {
+        if(COM1.RX_TimeOut > 0) {
+            //超时计数
+            if(--COM1.RX_TimeOut == 0) {
+                if(COM1.RX_Cnt > 0) {
+                    // 这里处理收到的数据，做具体的逻辑，可以调用自己的on_uart1_recv
+                    for(i=0; i<COM1.RX_Cnt; i++)	{
+                        // RX1_Buffer[i]存的是接收的每个字节，写出用 TX1_write2buff
+                        TX2_write2buff(RX1_Buffer[i]);// 写一个byte
+                }
+            }
+            COM1.RX_Cnt = 0;
+        }
+    }
+
+    // 不要处理的太快
+    os_wait2(K_TMO, 1);
+    }
+}
+
+void task_5() _task_ TASK_UART2 {
+    u8 i;
+    while(1) {
+        if(COM2.RX_TimeOut > 0) {
+            //超时计数
+            if(--COM2.RX_TimeOut == 0) {
+                if(COM2.RX_Cnt > 0) {
+                    // 这里处理收到的数据，做具体的逻辑，可以调用自己的on_uart1_recv
+                    for(i=0; i<COM2.RX_Cnt; i++)	{
+                        // RX1_Buffer[i]存的是接收的每个字节，写出用 TX1_write2buff
+                        TX1_write2buff(RX2_Buffer[i]);// 写一个byte
+                }
+            }
+            COM2.RX_Cnt = 0;
+        }
+    }
+
+    // 不要处理的太快
+    os_wait2(K_TMO, 1);
+    }
+}
+
