@@ -160,15 +160,15 @@ void Motors_turn(char speed ,  MotorMode mode) {
     MotorSpeed ms = {0};
     
     if(LEFT_M == mode) {
-        ms.LF_Speed = speed;
-        ms.RF_Speed = speed * 2;
-        ms.LB_Speed = speed;
-        ms.RB_Speed = speed * 2;
+        ms.LF_Speed = speed - 20;
+        ms.RF_Speed = speed+10;
+        ms.LB_Speed = speed - 20;
+        ms.RB_Speed = speed+10;
     } else if(RIGHT_M == mode) {
-        ms.LF_Speed = speed * 2;
-        ms.RF_Speed = speed;
-        ms.LB_Speed = speed * 2;
-        ms.RB_Speed = speed;
+        ms.LF_Speed = speed+10;
+        ms.RF_Speed = speed - 20;
+        ms.LB_Speed = speed+10;
+        ms.RB_Speed = speed - 20;
     }
     
     PWM_config(ms);
