@@ -178,3 +178,20 @@ void Motors_stop(){
     MotorSpeed ms = {0};
     PWM_config(ms);
 }
+
+
+//static char move(int value){
+//    
+//}
+
+// ”√”⁄¿∂—¿“£∏–
+void UART_move(char x, char y) {
+    MotorSpeed ms = {0};
+    
+    ms.LF_Speed = 0.25 * (int)(x + y);
+    ms.RF_Speed = 0.25 * (int)(y - x);
+    ms.LB_Speed = 0.25 * (int)(y - x);
+    ms.RB_Speed = 0.25 * (int)(y + x);
+    
+    PWM_config(ms);
+}

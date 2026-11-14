@@ -1,7 +1,36 @@
 # ===== Keil uVision 编译/临时产物 =====
-Objects/*
-!Objects/*.hex
-Listings/
+# 注意：含斜杠的 pattern 会被 git 锚定到仓库根目录，所以必须用 ** 才能匹配
+#       嵌套在 01_STC8 / 02_... / 04_ARM32 各 demo 里的目录。
+#       曾经写成 Objects/* 与裸的 project，两者都只在仓库根目录生效，
+#       等于对各个 demo 目录完全没起作用。
+#
+# 判据：只忽略"编译产物"，不忽略"参与编译的源码"。
+#   Project/RTE/Device/ 里那 12 个 gd32f4xx_*.c 是真被编译进固件的，必须入库。
+**/Objects/*.o
+**/Objects/*.d
+**/Objects/*.axf
+**/Objects/*.lnp
+**/Objects/*.sct
+**/Objects/*.dep
+**/Objects/*.build_log.htm
+**/Objects/*.htm
+**/Objects/*.crf
+**/Objects/*.map
+**/Objects/*.lst
+**/Listings/
+
+# CubeMX 风格工程（04_ARM32/03_GD32_HAL/*）：
+# 产物不叫 Objects/，而是直接放在 MDK-ARM/<工程名>/ 下，按扩展名忽略
+**/MDK-ARM/*/*.o
+**/MDK-ARM/*/*.d
+**/MDK-ARM/*/*.axf
+**/MDK-ARM/*/*.htm
+**/MDK-ARM/*/*.map
+**/MDK-ARM/*/*.lnp
+**/MDK-ARM/*/*.crf
+**/MDK-ARM/*/*.dep
+**/MDK-ARM/*/*.sct
+**/MDK-ARM/*/*.dbgconf
 *.uvguix.*
 *.uvgui.*
 *.plg
@@ -11,10 +40,11 @@ Listings/
 *.lst
 *.obj
 *.m51
-*.build_log.htm
 *.scvd
-project
 *.__i
+
+# RTE 只忽略自动生成的那一个头文件，Device 下的源码保留
+**/Project/RTE/_Target_1/RTE_Components.h
 
 # ===== 系统文件 =====
 Thumbs.db
@@ -24,8 +54,45 @@ Desktop.ini
 *.log
 *.log.lock
 
+# ===== 主机侧测试的可执行文件 =====
+# 08_GD32_Exam2/Test/test_fryer.c 用主机 gcc 编译，产物不入库
+*.exe
+
 # 注意：*.hex 不忽略——保留烧录文件，换电脑可直接用 STC-ISP 烧录
+
+# ===== Keil 链接输出（无扩展名）=====
+# Objects/project、Objects/Project 是 Keil 链接器产出的可执行映像（几百 KB 的
+# 二进制 data），不是源码。core.ignorecase=true，一条规则同时覆盖两种大小写。
+**/Objects/project
 
 # ===== 迁移新增 =====
 .vscode/
 stc8-learning/
+
+# ===== 第三方上游/可再获取内容（不进版本库）=====
+# 判据：官网/官方仓库能直接下到的整包，入库只是把仓库撑大。
+
+# FreeRTOS 官方发行包（548 MB / 21154 文件），官网 FreeRTOS.org 可下
+04_ARM32/05_FreeRTOS/FreeRTOSv202212.01/
+
+# LVGL 模拟器上游源码（99 MB / 1303 文件）。
+# lvgl_simulator/.gitmodules 已声明这两个是子模块，clone 后执行
+#   git submodule update --init --recursive
+# 即可还原；本项目自己的 main.c / lv_conf.h / Makefile 等仍然入库。
+05_LVGL/lvgl_simulator/lvgl/
+05_LVGL/lvgl_simulator/lv_drivers/
+05_LVGL/lvgl_simulator/build/
+
+# 离线语音/合成模型（727 MB，单个 .onnx 最大 239 MB，超 GitHub 100 MB 硬限制）
+# 来源见 03_Python/05_大模型点灯/README-models.md
+03_Python/05_大模型点灯/models/
+
+# 厂商 SDK 的压缩副本（与相邻解压目录重复）
+04_ARM32/06_CW32/CW32Template2.7z
+
+# 厂商 SDK 示例目录里的构建输出（CW32L011 SDK 的 Examples/*/MDK/output/）
+**/MDK/output/
+
+# Python 字节码
+__pycache__/
+*.pyc

@@ -64,7 +64,7 @@ void sys_init() {
     UART_config();
     
     //硬件驱动初始化
-//    Light_init();
+    Light_init();
     Key_init();
     Battery_init();
     Buzzer_init();
@@ -78,7 +78,7 @@ void sys_init() {
 void main_task() _task_ 0 {
     sys_init();
     
-    os_create_task(TASK_LIGHT);
+//    os_create_task(TASK_LIGHT);
     
     os_create_task(TASK_KEY);
     
@@ -317,12 +317,11 @@ D: 开启/关闭巡线
 
 void do_work_app(){
     u8 *buf = RX2_Buffer;
-    u8 i;
     char x, y;
     
-    u8 led_flag = 0;
-    u8 is_turning = 0;
-    u8 is_tracking = 0;
+    static u8 led_flag = 0;
+    static u8 is_turning = 0;
+    static u8 is_tracking = 0;
     
     u8 cur_A = buf[4];
 	u8 cur_B = buf[5];
@@ -330,46 +329,58 @@ void do_work_app(){
 	u8 cur_D = buf[7];
     
     
-    
     if(buf[0] != 0xDD || buf[1] != 0x77){
         return ;
     }
     
     //1. A键: 蜂鸣器/车灯 (边缘触发：只在按下的瞬间执行一次)
-    if(cur_A == 1){
-        if(led_flag == 0){
-            printf("灯亮");
-        }
-    } else if(cur_A == 0){
-        if(led_flag == 1){
-            printf("灯灭");
-        }
-    }
+    if (cur_A == 1) { 
+//		Buzzer_alarm();
+		if (led_flag == 0) { // 原来是灭，需要开灯
+			Light_on(ALL);
+		} else { // 原来是亮的，需关灯
+			Light_off(ALL);
+		}
+		led_flag = !led_flag; // 标志位反转
+	}
+    
     //2. D键: 开启/关闭巡线 (边缘触发)
-        
-    //3. 互斥锁：如果开启了巡线，屏蔽手动驾驶，直接退出
-        
-    //4. 运动控制 (无巡线时生效)
-        
-    //    B/C键: 旋转 (电平触发：按住持续生效)
-    //    摇杆控制: 只有在没有按下旋转按键时，摇杆才生效
-    
-    
-    printf("\n======================\n");
-    for(i = 0;i < 8;i++){
-        printf("0x%02X ", (int)buf[i]);
+    if(cur_D){
+        if(is_tracking == 0){
+            os_create_task(TASK_TRACK);
+        } else {
+            os_delete_task(TASK_TRACK);
+            Motors_stop();
+        }
+        is_tracking = !is_tracking;
     }
-    printf("\n======================\n");
     
+    //3. 互斥锁：如果开启了巡线，屏蔽手动驾驶，直接退出
+    if(is_tracking) return;
     
-    x = buf[2], y = buf[3];
-    printf("(x, y) -> (%d, %d)",(int)x,(int)y);
+    //4. 运动控制 (无巡线时生效)
+    //B/C键: 旋转 (电平触发：按住持续生效)
+    if(cur_B && !is_turning){
+        Motors_around(50, LEFT_M);
+        is_turning = !is_turning;   //必须加上标志位反转
+    }else if(cur_C && !is_turning){
+        Motors_around(50, RIGHT_M);
+        is_turning = !is_turning;   //必须加上标志位反转
+    }
+    if(!cur_B && !cur_C && is_turning){ //正在转向且已经抬起按钮，才停止马达
+        is_turning = !is_turning;
+        Motors_stop();
+    }
     
+    //摇杆控制: 只有在没有按下旋转按键时，摇杆才生效
+    if(!cur_A && !cur_B && !cur_C && !cur_D){
+        x = buf[2], y = buf[3];
+        UART_move(x, y);
+    }
 }
 
 
 void task_5() _task_ TASK_UART2 {
-    u8 i;
     while(1) {
         if(COM2.RX_TimeOut > 0) {
             //超时计数

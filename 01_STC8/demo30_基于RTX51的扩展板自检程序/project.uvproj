@@ -374,21 +374,6 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>OS</GroupName>
-          <Files>
-            <File>
-              <FileName>Conf_tny.A51</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\OS\Conf_tny.A51</FilePath>
-            </File>
-            <File>
-              <FileName>RTX51TNY.LIB</FileName>
-              <FileType>4</FileType>
-              <FilePath>.\OS\RTX51TNY.LIB</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>User</GroupName>
           <Files>
             <File>
@@ -560,6 +545,21 @@
               <FileName>Timer_Isr.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Lib\Timer_Isr.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OS</GroupName>
+          <Files>
+            <File>
+              <FileName>Conf_tny.A51</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\OS\Conf_tny.A51</FilePath>
+            </File>
+            <File>
+              <FileName>RTX51TNY.LIB</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\OS\RTX51TNY.LIB</FilePath>
             </File>
           </Files>
         </Group>

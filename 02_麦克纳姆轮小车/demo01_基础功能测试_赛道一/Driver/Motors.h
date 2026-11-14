@@ -58,4 +58,7 @@ void Motors_turn(char speed ,  MotorMode mode);
 // Õ£÷π
 void Motors_stop();
 
+//¿∂—¿“£∏–
+void UART_move(char x, char y);
+
 #endif

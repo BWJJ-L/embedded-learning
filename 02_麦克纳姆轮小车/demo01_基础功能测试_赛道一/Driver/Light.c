@@ -4,6 +4,8 @@
 void Light_init(){
     P0_MODE_OUT_PP(GPIO_Pin_7);
     P5_MODE_OUT_PP(GPIO_Pin_2);
+    
+    Light_off(ALL);
 }
 // ¿ªµÆ
 void Light_on(Light temp){

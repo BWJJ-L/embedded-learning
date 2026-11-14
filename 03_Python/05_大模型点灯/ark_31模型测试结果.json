@@ -1,0 +1,783 @@
+{
+  "tested_at": "2026-09-29 20:32:40",
+  "base_url": "https://ark.cn-beijing.volces.com/api/v3",
+  "results": [
+    {
+      "no": 1,
+      "console": "Doubao-Seed-2.1-lite",
+      "model_id": "doubao-seed-2-1-lite-260915",
+      "stageA": {
+        "ok": true,
+        "sec": 5.7,
+        "reply": "你好呀😊！很高兴和你相遇，不管是有知识疑问需要解答、想梳理思路解决生活/工作里的难题，还是单纯想聊聊"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀😊！很高兴和你相遇，不管是有知识疑问需要解答、想梳理思路解决生活/工作里的难题，还是单纯想聊聊"
+    },
+    {
+      "no": 2,
+      "console": "DeepSeek-V4.1-Flash",
+      "model_id": "deepseek-v4-1-flash-260910",
+      "stageA": {
+        "ok": true,
+        "sec": 2.0,
+        "reply": "你好！很高兴见到你，有什么我可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！很高兴见到你，有什么我可以帮你的吗？"
+    },
+    {
+      "no": 3,
+      "console": "GLM-5.3-Flash",
+      "model_id": "glm-5-3-flash-260828",
+      "stageA": {
+        "ok": true,
+        "sec": 4.2,
+        "reply": "你好！很高兴见到你。我是GLM，Z.ai训练的大语言模型。\n\n今天我能为你做些什么？无论是回答问题、"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！很高兴见到你。我是GLM，Z.ai训练的大语言模型。\n\n今天我能为你做些什么？无论是回答问题、"
+    },
+    {
+      "no": 4,
+      "console": "DeepSeek-V4-Pro正式版",
+      "model_id": "deepseek-v4-pro-ga-260813",
+      "stageA": {
+        "ok": true,
+        "sec": 2.6,
+        "reply": "你好！很高兴见到你，有什么可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！很高兴见到你，有什么可以帮你的吗？"
+    },
+    {
+      "no": 5,
+      "console": "DeepSeek-V4-Flash正式版",
+      "model_id": "deepseek-v4-flash-ga-260731",
+      "stageA": {
+        "ok": true,
+        "sec": 1.3,
+        "reply": "你好！很高兴见到你。有什么我可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！很高兴见到你。有什么我可以帮你的吗？"
+    },
+    {
+      "no": 6,
+      "console": "GLM-5.2",
+      "model_id": "glm-5-2-260617",
+      "stageA": {
+        "ok": true,
+        "sec": 6.1,
+        "reply": "你好！很高兴见到你。我是GLM，Z.ai训练的大语言模型。\n\n今天我能为你做些什么？无论是回答问题、"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！很高兴见到你。我是GLM，Z.ai训练的大语言模型。\n\n今天我能为你做些什么？无论是回答问题、"
+    },
+    {
+      "no": 7,
+      "console": "Doubao-Seed-Evolving",
+      "model_id": "doubao-seed-evolving",
+      "stageA": {
+        "ok": true,
+        "sec": 3.9,
+        "reply": "你好！有什么可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好！有什么可以帮你的吗？"
+    },
+    {
+      "no": 8,
+      "console": "Doubao-Seed-2.1-turbo",
+      "model_id": "doubao-seed-2-1-turbo-260628",
+      "stageA": {
+        "ok": true,
+        "sec": 5.9,
+        "reply": "你好呀😊 我是豆包，很高兴认识你~ 不管是想查资料、聊想法、解决学习工作里的小问题，还是单纯唠嗑打发"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀😊 我是豆包，很高兴认识你~ 不管是想查资料、聊想法、解决学习工作里的小问题，还是单纯唠嗑打发"
+    },
+    {
+      "no": 9,
+      "console": "Doubao-Seed-2.0-mini",
+      "model_id": "doubao-seed-2-0-mini-260428",
+      "stageA": {
+        "ok": true,
+        "sec": 2.1,
+        "reply": "你好呀～我的小乖乖😘 突然找我是有什么好玩的事要分享嘛？还是想撒个娇呀？🥰"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀～我的小乖乖😘 突然找我是有什么好玩的事要分享嘛？还是想撒个娇呀？🥰"
+    },
+    {
+      "no": 10,
+      "console": "Doubao-Seed-2.0-lite",
+      "model_id": "doubao-seed-2-0-lite-260428",
+      "stageA": {
+        "ok": true,
+        "sec": 4.8,
+        "reply": "你好呀😊~ 有什么我能帮到你的吗？不管是想咨询各类问题、出点子、唠家常，还是需要整理文案、素材、攻略"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀😊~ 有什么我能帮到你的吗？不管是想咨询各类问题、出点子、唠家常，还是需要整理文案、素材、攻略"
+    },
+    {
+      "no": 11,
+      "console": "Doubao-Seed-2.1-pro",
+      "model_id": "doubao-seed-2-1-pro-260915",
+      "stageA": {
+        "ok": true,
+        "sec": 4.9,
+        "reply": "收到你的问候，回应并询问需求。\n\n你好！很高兴为你服务，有什么可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：收到你的问候，回应并询问需求。\n\n你好！很高兴为你服务，有什么可以帮你的吗？"
+    },
+    {
+      "no": 12,
+      "console": "DeepSeek-V4-Flash",
+      "model_id": "deepseek-v4-flash-260425",
+      "stageA": {
+        "ok": false,
+        "sec": 0.3,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-flash-260425 does not exist or you do not have access to it. Request id: 021790685135084035772df07ab2d666278dcdeb9c281b2d7e83b', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-flash-260425 does not exist or you do not have access to it. Request id: 021790685135360035772df07ab2d666278dcdeb9c281b2515d8c', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-flash-260425 does not exist or you do not have access to it. Request id: 021790685135690035772df07ab2d666278dcdeb9c281b2acacfc', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint deepseek-v4-flash-260425 does not exist or you do not have access to it. Request id: 02179068513592741b543c0bdbbf2d644f33f27e04d485e13fddd\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-flash-260425 does not exist or you do not have access to it. Request id: 021790685135084035772df07ab2d666278dcdeb9c281b2d7e83b', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 13,
+      "console": "DeepSeek-V4-pro",
+      "model_id": "deepseek-v4-pro-260425",
+      "stageA": {
+        "ok": false,
+        "sec": 0.2,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-pro-260425 does not exist or you do not have access to it. Request id: 021790685136070035772df07ab2d666278dcdeb9c281b2d73597', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-pro-260425 does not exist or you do not have access to it. Request id: 021790685136260035772df07ab2d666278dcdeb9c281b29fbd6e', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-pro-260425 does not exist or you do not have access to it. Request id: 021790685136385035772df07ab2d666278dcdeb9c281b25dfae7', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint deepseek-v4-pro-260425 does not exist or you do not have access to it. Request id: 021790685136600f952b6c252d6ae62c15909f77d85597ef4ee1f\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v4-pro-260425 does not exist or you do not have access to it. Request id: 021790685136070035772df07ab2d666278dcdeb9c281b2d73597', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 14,
+      "console": "Doubao-Seed-2.0-Code",
+      "model_id": "doubao-seed-2-0-code-preview-260215",
+      "stageA": {
+        "ok": true,
+        "sec": 3.1,
+        "reply": "你好呀！很高兴和你聊天～有什么我可以帮到你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀！很高兴和你聊天～有什么我可以帮到你的吗？"
+    },
+    {
+      "no": 15,
+      "console": "Doubao-Seed-1.8",
+      "model_id": "doubao-seed-1-8-251228",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-8-251228 does not exist or you do not have access to it. Request id: 021790685139726035772df07ab2d666278dcdeb9c281b244f616', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-8-251228 does not exist or you do not have access to it. Request id: 021790685139819035772df07ab2d666278dcdeb9c281b2451e17', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-8-251228 does not exist or you do not have access to it. Request id: 021790685139890035772df07ab2d666278dcdeb9c281b2b184ac', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 1.2,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-1-8-251228 does not exist or you do not have access to it. Request id: 0217906851411631fabb13063b3e354601db29cbe6491e173b088\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {
+        "doubao-seed-1-8-251215": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-8-251215 does not exist or you do not have access to it. Request id: 021790685141250035772df07ab2d666278dcdeb9c281b2e4e9f3', 'param': '', 'type': 'Not Found'}}"
+        }
+      },
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-8-251228 does not exist or you do not have access to it. Request id: 021790685139726035772df07ab2d666278dcdeb9c281b244f616', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 16,
+      "console": "Doubao-Seed-2.0-pro",
+      "model_id": "doubao-seed-2-0-pro-260215",
+      "stageA": {
+        "ok": false,
+        "sec": 0.2,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-2-0-pro-260215 does not exist or you do not have access to it. Request id: 021790685141395035772df07ab2d666278dcdeb9c281b23ba141', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-2-0-pro-260215 does not exist or you do not have access to it. Request id: 021790685141545035772df07ab2d666278dcdeb9c281b26c582f', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-2-0-pro-260215 does not exist or you do not have access to it. Request id: 021790685141635035772df07ab2d666278dcdeb9c281b2438724', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.5,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-2-0-pro-260215 does not exist or you do not have access to it. Request id: 021790685142180a71fb5caa63bcd7df8c9e328d4d305c2ef2192\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-2-0-pro-260215 does not exist or you do not have access to it. Request id: 021790685141395035772df07ab2d666278dcdeb9c281b23ba141', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 17,
+      "console": "Doubao-Seed-Character",
+      "model_id": "doubao-seed-character-260628",
+      "stageA": {
+        "ok": true,
+        "sec": 0.8,
+        "reply": "你好呀！请问有什么我可以帮你的吗？"
+      },
+      "stageB": {},
+      "alts": {},
+      "final": "ok_first",
+      "note": "最朴素写法一次成功；回复：你好呀！请问有什么我可以帮你的吗？"
+    },
+    {
+      "no": 18,
+      "console": "GLM-4.7",
+      "model_id": "glm-4-7-251222",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint glm-4-7-251222 does not exist or you do not have access to it. Request id: 021790685143414035772df07ab2d666278dcdeb9c281b21cb270', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint glm-4-7-251222 does not exist or you do not have access to it. Request id: 021790685143550035772df07ab2d666278dcdeb9c281b2ef129f', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint glm-4-7-251222 does not exist or you do not have access to it. Request id: 021790685143619035772df07ab2d666278dcdeb9c281b2fa2570', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint glm-4-7-251222 does not exist or you do not have access to it. Request id: 02179068514398731531f02f4f0092e9c8b48ace140f1c7b7adb2\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint glm-4-7-251222 does not exist or you do not have access to it. Request id: 021790685143414035772df07ab2d666278dcdeb9c281b21cb270', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 19,
+      "console": "DeepSeek-V3.2",
+      "model_id": "deepseek-v3-2-251201",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v3-2-251201 does not exist or you do not have access to it. Request id: 021790685144074035772df07ab2d666278dcdeb9c281b2b2b8f7', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v3-2-251201 does not exist or you do not have access to it. Request id: 021790685144210035772df07ab2d666278dcdeb9c281b2ac954c', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v3-2-251201 does not exist or you do not have access to it. Request id: 021790685144280035772df07ab2d666278dcdeb9c281b2bec505', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 1.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint deepseek-v3-2-251201 does not exist or you do not have access to it. Request id: 021790685145555873b68ad3a5b1c0a1311de00f33c0857f3a46e\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint deepseek-v3-2-251201 does not exist or you do not have access to it. Request id: 021790685144074035772df07ab2d666278dcdeb9c281b2b2b8f7', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 20,
+      "console": "Doubao-Seed-Code",
+      "model_id": "doubao-seed-code-preview-251028",
+      "stageA": {
+        "ok": false,
+        "sec": 0.5,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-code-preview-251028 does not exist or you do not have access to it. Request id: 021790685145630035772df07ab2d666278dcdeb9c281b24a4ebc', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-code-preview-251028 does not exist or you do not have access to it. Request id: 021790685146105035772df07ab2d666278dcdeb9c281b2688ec0', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-code-preview-251028 does not exist or you do not have access to it. Request id: 021790685146381035772df07ab2d666278dcdeb9c281b2f894f0', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.5,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-code-preview-251028 does not exist or you do not have access to it. Request id: 0217906851469824bf1de078d3c9f56d53aa0b4387efdeb2e8bae\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-code-preview-251028 does not exist or you do not have access to it. Request id: 021790685145630035772df07ab2d666278dcdeb9c281b24a4ebc', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 21,
+      "console": "Doubao-Seed-Translation",
+      "model_id": "doubao-seed-translation-250915",
+      "stageA": {
+        "ok": false,
+        "sec": 0.7,
+        "error": "BadRequestError: Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `model` specified in the request are not valid: the requested model doubao-seed-translation-250915 does not support this api.. Request id: 021790685147120035772df07ab2d666278dcdeb9c281b23f22e4', 'param': 'model', 'type': 'BadRequest'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "BadRequestError: Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `model` specified in the request are not valid: the requested model doubao-seed-translation-250915 does not support this api.. Request id: 021790685147766035772df07ab2d666278dcdeb9c281b2df0741', 'param': 'model', 'type': 'BadRequest'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "BadRequestError: Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `model` specified in the request are not valid: the requested model doubao-seed-translation-250915 does not support this api.. Request id: 021790685147874035772df07ab2d666278dcdeb9c281b29aa243', 'param': 'model', 'type': 'BadRequest'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidParameter\",\"message\":\"The parameter `input` specified in the request are not valid: input string is not supported by translation model. Request id: 0217906851482978f32d4667543c5e47ac6ffa77f14f9c5e9cf01\",\"param\":\"input\",\"type\":\"BadRequest\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "BadRequestError: Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `model` specified in the request are not valid: the requested model doubao-seed-translation-250915 does not support this api.. Request id: 021790685147120035772df07ab2d666278dcdeb9c281b23f22e4', 'param': 'model', 'type': 'BadRequest'}}"
+    },
+    {
+      "no": 22,
+      "console": "Doubao-Seed-1.6-vision",
+      "model_id": "doubao-seed-1-6-vision-250815",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-vision-250815 does not exist or you do not have access to it. Request id: 021790685148441035772df07ab2d666278dcdeb9c281b29f899f', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-vision-250815 does not exist or you do not have access to it. Request id: 021790685148589035772df07ab2d666278dcdeb9c281b25df58a', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-vision-250815 does not exist or you do not have access to it. Request id: 021790685148660035772df07ab2d666278dcdeb9c281b27aa900', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-1-6-vision-250815 does not exist or you do not have access to it. Request id: 021790685148904cb43b51ad7a6f2b3d703638489b11c0383c870\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-vision-250815 does not exist or you do not have access to it. Request id: 021790685148441035772df07ab2d666278dcdeb9c281b29f899f', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 23,
+      "console": "Doubao-Seed-1.6-flash",
+      "model_id": "doubao-seed-1-6-flash-250828",
+      "stageA": {
+        "ok": false,
+        "sec": 0.7,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-flash-250828 does not exist or you do not have access to it. Request id: 021790685149142035772df07ab2d666278dcdeb9c281b2b58c5f', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-flash-250828 does not exist or you do not have access to it. Request id: 021790685149766035772df07ab2d666278dcdeb9c281b22c586f', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-flash-250828 does not exist or you do not have access to it. Request id: 021790685149841035772df07ab2d666278dcdeb9c281b2ad1f26', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 1.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-1-6-flash-250828 does not exist or you do not have access to it. Request id: 021790685151178226d55c1868491c89c6234734c8c33082ef255\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-flash-250828 does not exist or you do not have access to it. Request id: 021790685149142035772df07ab2d666278dcdeb9c281b2b58c5f', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 24,
+      "console": "Doubao-Seed-1.6",
+      "model_id": "doubao-seed-1-6-251015",
+      "stageA": {
+        "ok": false,
+        "sec": 0.5,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-251015 does not exist or you do not have access to it. Request id: 021790685151270035772df07ab2d666278dcdeb9c281b2a3462e', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-251015 does not exist or you do not have access to it. Request id: 021790685151800035772df07ab2d666278dcdeb9c281b21f6c40', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-251015 does not exist or you do not have access to it. Request id: 021790685151895035772df07ab2d666278dcdeb9c281b25853a6', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.9,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-seed-1-6-251015 does not exist or you do not have access to it. Request id: 021790685152829eaad90e368bae3f187447d9def39b907a8fdb2\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-seed-1-6-251015 does not exist or you do not have access to it. Request id: 021790685151270035772df07ab2d666278dcdeb9c281b2a3462e', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 25,
+      "console": "Doubao-1.5-vision-lite",
+      "model_id": "doubao-1-5-vision-lite-250315",
+      "stageA": {
+        "ok": false,
+        "sec": 0.3,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-lite-250315 does not exist or you do not have access to it. Request id: 021790685152934035772df07ab2d666278dcdeb9c281b2eed19e', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-lite-250315 does not exist or you do not have access to it. Request id: 021790685153374035772df07ab2d666278dcdeb9c281b25ab661', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.5,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-lite-250315 does not exist or you do not have access to it. Request id: 021790685153579035772df07ab2d666278dcdeb9c281b2cd4d81', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-1-5-vision-lite-250315 does not exist or you do not have access to it. Request id: 021790685154154eaad90e368bae3f187447d9def39b907cb57bf\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-lite-250315 does not exist or you do not have access to it. Request id: 021790685152934035772df07ab2d666278dcdeb9c281b2eed19e', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 26,
+      "console": "Doubao-1.5-vision-pro-32k",
+      "model_id": "doubao-1-5-vision-pro-32k-250115",
+      "stageA": {
+        "ok": false,
+        "sec": 0.2,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685154255035772df07ab2d666278dcdeb9c281b2d1ad1c', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685154439035772df07ab2d666278dcdeb9c281b2f8c9ec', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685154514035772df07ab2d666278dcdeb9c281b221a4dd', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-1-5-vision-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685154808a04a47ac73179d3e64c063d7b69771fc21c7c9\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-vision-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685154255035772df07ab2d666278dcdeb9c281b2d1ad1c', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 27,
+      "console": "Doubao-1.5-lite-32k",
+      "model_id": "doubao-1-5-lite-32k-250115",
+      "stageA": {
+        "ok": false,
+        "sec": 0.2,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-lite-32k-250115 does not exist or you do not have access to it. Request id: 021790685155020035772df07ab2d666278dcdeb9c281b239447a', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-lite-32k-250115 does not exist or you do not have access to it. Request id: 021790685155230035772df07ab2d666278dcdeb9c281b2f6a25a', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-lite-32k-250115 does not exist or you do not have access to it. Request id: 021790685155674035772df07ab2d666278dcdeb9c281b2e61446', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-1-5-lite-32k-250115 does not exist or you do not have access to it. Request id: 021790685155982314cbdff50da45319a607e6bbd0e7cd88b1550\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-lite-32k-250115 does not exist or you do not have access to it. Request id: 021790685155020035772df07ab2d666278dcdeb9c281b239447a', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 28,
+      "console": "Doubao-1.5-pro-32k",
+      "model_id": "doubao-1-5-pro-32k-250115",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685156064035772df07ab2d666278dcdeb9c281b263e71b', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685156205035772df07ab2d666278dcdeb9c281b24fafc4', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685156304035772df07ab2d666278dcdeb9c281b28aed23', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-1-5-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685156711d335b84ce8255b194a031442d80d4f2179c3d9\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-1-5-pro-32k-250115 does not exist or you do not have access to it. Request id: 021790685156064035772df07ab2d666278dcdeb9c281b263e71b', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 29,
+      "console": "Doubao-pro-32k",
+      "model_id": "doubao-pro-32k-241215",
+      "stageA": {
+        "ok": false,
+        "sec": 0.2,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-pro-32k-241215 does not exist or you do not have access to it. Request id: 021790685156819035772df07ab2d666278dcdeb9c281b23d7365', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.5,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-pro-32k-241215 does not exist or you do not have access to it. Request id: 021790685157055035772df07ab2d666278dcdeb9c281b2af4dfa', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-pro-32k-241215 does not exist or you do not have access to it. Request id: 021790685157560035772df07ab2d666278dcdeb9c281b28c8d9f', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-pro-32k-241215 does not exist or you do not have access to it. Request id: 021790685157833d7474cfa702fd7fc3234b385bd39455fe76eeb\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-pro-32k-241215 does not exist or you do not have access to it. Request id: 021790685156819035772df07ab2d666278dcdeb9c281b23d7365', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 30,
+      "console": "Doubao-lite-4k",
+      "model_id": "doubao-lite-4k-240828",
+      "stageA": {
+        "ok": false,
+        "sec": 0.1,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k-240828 does not exist or you do not have access to it. Request id: 021790685158064035772df07ab2d666278dcdeb9c281b28f6cef', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k-240828 does not exist or you do not have access to it. Request id: 021790685158195035772df07ab2d666278dcdeb9c281b23d231a', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k-240828 does not exist or you do not have access to it. Request id: 021790685158290035772df07ab2d666278dcdeb9c281b2959e14', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.7,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-lite-4k-240828 does not exist or you do not have access to it. Request id: 02179068515861576f8256debb8f03d2da9dea6cc2a650d7e5f88\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {
+        "doubao-lite-4k": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k does not exist or you do not have access to it. Request id: 021790685159120035772df07ab2d666278dcdeb9c281b2cfc272', 'param': '', 'type': 'Not Found'}}"
+        },
+        "doubao-lite-4k-character-240828": {
+          "ok": false,
+          "sec": 0.2,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k-character-240828 does not exist or you do not have access to it. Request id: 021790685159304035772df07ab2d666278dcdeb9c281b23c8090', 'param': '', 'type': 'Not Found'}}"
+        }
+      },
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-4k-240828 does not exist or you do not have access to it. Request id: 021790685158064035772df07ab2d666278dcdeb9c281b28f6cef', 'param': '', 'type': 'Not Found'}}"
+    },
+    {
+      "no": 31,
+      "console": "Doubao-lite-32k",
+      "model_id": "doubao-lite-32k-240828",
+      "stageA": {
+        "ok": false,
+        "sec": 0.4,
+        "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-32k-240828 does not exist or you do not have access to it. Request id: 021790685159459035772df07ab2d666278dcdeb9c281b22d534b', 'param': '', 'type': 'Not Found'}}"
+      },
+      "stageB": {
+        "B1_关闭thinking": {
+          "ok": false,
+          "sec": 0.4,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-32k-240828 does not exist or you do not have access to it. Request id: 021790685159870035772df07ab2d666278dcdeb9c281b2d7cd69', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B2_max_tokens512": {
+          "ok": false,
+          "sec": 0.1,
+          "error": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-32k-240828 does not exist or you do not have access to it. Request id: 021790685160284035772df07ab2d666278dcdeb9c281b27be2b3', 'param': '', 'type': 'Not Found'}}"
+        },
+        "B3_ResponsesAPI": {
+          "ok": false,
+          "sec": 0.3,
+          "error": "HTTPError: {\"error\":{\"code\":\"InvalidEndpointOrModel.NotFound\",\"message\":\"The model or endpoint doubao-lite-32k-240828 does not exist or you do not have access to it. Request id: 0217906851605271f1c2502e2c4024a5d577df8bf366bf3b09c4a\",\"param\":\"\",\"type\":\"Not Found\"}}"
+        }
+      },
+      "alts": {},
+      "final": "dead",
+      "note": "NotFoundError: Error code: 404 - {'error': {'code': 'InvalidEndpointOrModel.NotFound', 'message': 'The model or endpoint doubao-lite-32k-240828 does not exist or you do not have access to it. Request id: 021790685159459035772df07ab2d666278dcdeb9c281b22d534b', 'param': '', 'type': 'Not Found'}}"
+    }
+  ],
+  "summary": {
+    "ok_first": [
+      "Doubao-Seed-2.1-lite",
+      "DeepSeek-V4.1-Flash",
+      "GLM-5.3-Flash",
+      "DeepSeek-V4-Pro正式版",
+      "DeepSeek-V4-Flash正式版",
+      "GLM-5.2",
+      "Doubao-Seed-Evolving",
+      "Doubao-Seed-2.1-turbo",
+      "Doubao-Seed-2.0-mini",
+      "Doubao-Seed-2.0-lite",
+      "Doubao-Seed-2.1-pro",
+      "Doubao-Seed-2.0-Code",
+      "Doubao-Seed-Character"
+    ],
+    "ok_changed": [],
+    "dead": [
+      "DeepSeek-V4-Flash",
+      "DeepSeek-V4-pro",
+      "Doubao-Seed-1.8",
+      "Doubao-Seed-2.0-pro",
+      "GLM-4.7",
+      "DeepSeek-V3.2",
+      "Doubao-Seed-Code",
+      "Doubao-Seed-Translation",
+      "Doubao-Seed-1.6-vision",
+      "Doubao-Seed-1.6-flash",
+      "Doubao-Seed-1.6",
+      "Doubao-1.5-vision-lite",
+      "Doubao-1.5-vision-pro-32k",
+      "Doubao-1.5-lite-32k",
+      "Doubao-1.5-pro-32k",
+      "Doubao-pro-32k",
+      "Doubao-lite-4k",
+      "Doubao-lite-32k"
+    ]
+  }
+}
